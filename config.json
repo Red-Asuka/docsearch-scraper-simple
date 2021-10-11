@@ -1,8 +1,6 @@
 {
   "index_name": "emq_docs",
-  "sitemap_urls": [
-    "https://docs.emqx.com/sitemap_emqx_v4.0.xml"
-  ],
+  "sitemap_urls": [],
   "strip_chars": "#  ",
   "selectors": {
     "lvl0": ".theme-default-content h1",
@@ -14,7 +12,5 @@
   },
   "custom_settings": {
     "attributesForFaceting": ["language", "product", "version"]
-  },
-  "current_product": "emqx",
-  "current_version": "v4.0"
+  }
 }

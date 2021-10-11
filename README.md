@@ -6,11 +6,21 @@ pipenv install --keep-outdated
 pipenv shell
 ```
 
-## Use
+## Set ENV
 ```shell
 export APPLICATION_ID=<YOUR_APPLICATION_ID>
 export API_KEY=<YOUR_API_KEY>
-export CONFIG=$(cat config.json | jq -r tostring)
-
-python3 -m src.index
 ```
+
+## Run
+```shell
+python3 -m src.index <CONFIG_FILE_NAME> <PRODUCT> <VERSION>
+
+python3 -m src.index global-config emqx v4.3
+python3 -m src.index config emqx v4.3
+```
+
+> `CONFIG_FILE_NAME`: `global-config` or `config`
+## Links
+- <https://github.com/algolia/docsearch-scraper>
+- <https://github.com/Swilder-M/docsearch-scraper>

@@ -116,6 +116,16 @@ def run_config(config):
 
 
 if __name__ == '__main__':
-    from os import environ
+    import sys
+    _, config_name, product, version = sys.argv
+    if config_name not in ['config', 'global-config']:
+        print('invalid config name')
+        exit(1)
 
-    run_config(environ['CONFIG'])
+    config_dict = json.load(open(f'{config_name}.json', 'r'))
+    config_dict['sitemap_urls'] = [f'https://docs.emqx.com/sitemap_{product}_{version}.xml']
+    config_dict['current_product'] = product
+    if config_name == 'config':
+        config_dict['current_version'] = version
+
+    run_config(json.dumps(config_dict))
