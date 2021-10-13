@@ -116,7 +116,7 @@ def run_config(config):
 
 if __name__ == '__main__':
     import sys
-    _, config_name, product = sys.argv
+    _, config_name, product, version = sys.argv
     if config_name not in ['config', 'global-config']:
         print('invalid config name')
         exit(1)
