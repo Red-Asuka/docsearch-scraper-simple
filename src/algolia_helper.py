@@ -9,7 +9,7 @@ from builtins import range
 class AlgoliaHelper:
     """AlgoliaHelper"""
 
-    def __init__(self, app_id, api_key, index_name, index_name_tmp, settings, query_rules, current_product, current_version):
+    def __init__(self, app_id, api_key, index_name, index_name_tmp, settings, query_rules, current_product):
         self.algolia_client = SearchClient.create(app_id, api_key)
         self.index_name = index_name
         self.algolia_index = self.algolia_client.init_index(self.index_name)
@@ -23,16 +23,9 @@ class AlgoliaHelper:
             self.algolia_index.save_rules(query_rules, True, True)
 
         # for emqx docs
-        index_facet_filters = []
         if current_product:
-            index_facet_filters.append(f'product:{current_product}')
-
-        if current_version:
-            index_facet_filters.append(f'version:{current_version}')
-
-        if index_facet_filters:
             self.algolia_index.delete_by({
-              'facetFilters': index_facet_filters
+              'facetFilters': [f'product:{current_product}']
             })
 
     def add_records(self, records, url, from_sitemap):
