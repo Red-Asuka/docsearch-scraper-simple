@@ -16,8 +16,8 @@ export API_KEY=<YOUR_API_KEY>
 ```shell
 python3 -m src.index <CONFIG_FILE_NAME> <PRODUCT> <VERSION>
 
-python3 -m src.index global-config emqx v4.3
-python3 -m src.index config emqx v4.3
+python3 -m src.index global-config broker v4.3
+python3 -m src.index config broker v4.3
 ```
 
 > `CONFIG_FILE_NAME`: `global-config` or `config`

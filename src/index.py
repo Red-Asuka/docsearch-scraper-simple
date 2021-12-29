@@ -122,6 +122,9 @@ if __name__ == '__main__':
         exit(1)
 
     config_dict = json.load(open(f'{config_name}.json', 'r'))
-    config_dict['sitemap_urls'] = [f'https://docs.emqx.com/sitemap_{product}_{version}.xml']
+    if product == 'broker':
+        config_dict['sitemap_urls'] = [f'https://www.emqx.io/docs/sitemap_broker_{version}.xml']
+    else:
+        config_dict['sitemap_urls'] = [f'https://docs.emqx.com/sitemap_{product}_{version}.xml']
     config_dict['current_product'] = product
     run_config(json.dumps(config_dict))
