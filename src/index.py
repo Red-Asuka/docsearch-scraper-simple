@@ -124,6 +124,10 @@ if __name__ == '__main__':
     config_dict = json.load(open(f'{config_name}.json', 'r'))
     if product == 'broker':
         config_dict['sitemap_urls'] = [f'https://www.emqx.io/docs/sitemap_{version}.xml']
+    elif product == 'nanomq':
+        config_dict['sitemap_urls'] = [f'https://nanomq.io/docs/sitemap_{version}.xml']
+    elif product == 'neuron':
+        config_dict['sitemap_urls'] = [f'https://neugates.io/docs/sitemap_{version}.xml']
     else:
         config_dict['sitemap_urls'] = [f'https://docs.emqx.com/sitemap_{product}_{version}.xml']
     config_dict['current_product'] = product
