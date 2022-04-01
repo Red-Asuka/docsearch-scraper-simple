@@ -130,6 +130,8 @@ if __name__ == '__main__':
         config_dict['sitemap_urls'] = [f'https://neugates.io/docs/sitemap_{version}.xml']
     elif product == 'ekuiper':
         config_dict['sitemap_urls'] = [f'https://ekuiper.org/docs/sitemap_{version}.xml']
+    elif product == 'hstreamdb':
+        config_dict['sitemap_urls'] = [f'https://hstream.io/docs/sitemap_{version}.xml']
     else:
         config_dict['sitemap_urls'] = [f'https://docs.emqx.com/sitemap_{product}_{version}.xml']
     config_dict['current_product'] = product
