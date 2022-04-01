@@ -27,8 +27,8 @@ runs:
   steps:
     - shell: bash
       env:
-        APPLICATION_ID: '{{ inputs.algolia_application_id }}'
-        API_KEY: '{{ inputs.algolia_api_key }}'
+        APPLICATION_ID: ${{ inputs.algolia_application_id }}
+        API_KEY: ${{ inputs.algolia_api_key }}
       run: |
         python -m pip install --upgrade pipenv wheel
         cd ${{ github.action_path }}
