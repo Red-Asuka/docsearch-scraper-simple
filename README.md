@@ -24,3 +24,16 @@ python3 -m src.index config broker v4.3
 ## Links
 - <https://github.com/algolia/docsearch-scraper>
 - <https://github.com/Swilder-M/docsearch-scraper>
+
+
+## Use for github action
+```yaml
+      - name: update search index
+        uses: Swilder-M/docsearch-scraper-simple@v1
+        env:
+          APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
+          API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+        with:
+          docs_type: ${{ env.DOCS_TYPE }}
+          docs_version: ${{ env.VERSION }}
+```
