@@ -138,4 +138,5 @@ if __name__ == '__main__':
     else:
         config_dict['sitemap_urls'] = [f'https://docs.emqx.com/sitemap_{product}_{version}.xml']
     config_dict['current_product'] = product
+    print('Run config: ', config_dict)
     run_config(json.dumps(config_dict))
