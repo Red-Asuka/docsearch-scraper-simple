@@ -66,6 +66,7 @@ class ConfigLoader:
     nb_hits_max = 6000000
 
     current_product = ''
+    current_version = ''
 
     def __init__(self, config):
         data = self._load_config(config)

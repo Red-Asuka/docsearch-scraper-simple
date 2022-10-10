@@ -43,7 +43,8 @@ def run_config(config):
         config.index_name_tmp,
         AlgoliaSettings.get(config, strategy.levels),
         config.query_rules,
-        config.current_product
+        config.current_product,
+        config.current_version
     )
 
     root_module = 'src.' if __name__ == '__main__' else 'scraper.src.'
@@ -138,5 +139,7 @@ if __name__ == '__main__':
     else:
         config_dict['sitemap_urls'] = [f'https://docs.emqx.com/sitemap_{product}_{version}.xml']
     config_dict['current_product'] = product
+    if config_name == 'config':
+        config_dict['current_version'] = version
     print('Run config: ', config_dict)
     run_config(json.dumps(config_dict))
