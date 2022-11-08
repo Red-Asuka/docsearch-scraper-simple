@@ -22,4 +22,4 @@ runs:
         python -m pip install --upgrade pipenv wheel
         cd ${{ github.action_path }}
         pipenv install --keep-outdated
-        pipenv run python -m src.index config ${{ inputs.docs_type }} ${{ inputs.docs_version }}
+        pipenv run python -m src.index ${{ inputs.docs_type }} ${{ inputs.docs_version }}
