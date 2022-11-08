@@ -25,7 +25,6 @@
     "default": {
       "lvl0": {
         "selector": "",
-        "global": true,
         "default_value": "MQTT X Desktop"
       },
       "lvl1": ".page-docs .nuxt-content h1",
@@ -39,7 +38,6 @@
     "cli": {
       "lvl0": {
         "selector": "",
-        "global": true,
         "default_value": "MQTT X CLI"
       },
       "lvl1": ".page-docs .nuxt-content h1",
@@ -53,7 +51,6 @@
     "web": {
       "lvl0": {
         "selector": "",
-        "global": true,
         "default_value": "MQTT X Web"
       },
       "lvl1": ".page-docs .nuxt-content h1",
