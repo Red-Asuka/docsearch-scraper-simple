@@ -4,7 +4,7 @@
   "min_indexed_level": 1,
   "selectors": {
     "lvl0": ".page-docs #docs-type-tabs a.is-active",
-    "lvl1": ".page-docs #docs-sidebar .sidebar-link a.is-active",
+    "lvl1": ".page-docs .nuxt-content h1",
     "lvl2": ".page-docs .nuxt-content h2",
     "lvl3": ".page-docs .nuxt-content h3",
     "lvl4": ".page-docs .nuxt-content h4",
