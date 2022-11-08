@@ -118,7 +118,7 @@ def run_config(config):
 if __name__ == '__main__':
     import sys
     _, config_name, product, version = sys.argv
-    if config_name not in ['config', 'global-config']:
+    if config_name not in ['config', 'global-config', 'mqttx-config']:
         print('invalid config name')
         exit(1)
 
@@ -136,10 +136,14 @@ if __name__ == '__main__':
         config_dict['sitemap_urls'] = [f'https://ekuiper.org/docs/sitemap_{version}.xml']
     elif product == 'hstreamdb':
         config_dict['sitemap_urls'] = [f'https://hstream.io/docs/sitemap_{version}.xml']
+    elif product == 'mqttx':
+        config_dict['index_name'] = 'mqttx'
+        config_dict['start_urls'] = ["https://mqttx.app/docs", "https://mqttx.app/zh/docs"]
+        # config_dict['sitemap_urls'] = ['https://mqttx.app/sitemap.xml']
     else:
         config_dict['sitemap_urls'] = [f'https://docs.emqx.com/sitemap_{product}_{version}.xml']
     config_dict['current_product'] = product
-    if config_name == 'config':
+    if config_name in ['config', 'mqttx-config']:
         config_dict['current_version'] = version
     print('Run config: ', config_dict)
     run_config(json.dumps(config_dict))
