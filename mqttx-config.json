@@ -1,66 +1,16 @@
 {
   "index_name": "mqttx",
-  "start_urls": [
-    "https://mqttx.app/docs",
-    "https://mqttx.app/zh/docs",
-    {
-      "url": "https://mqttx.app/docs/cli",
-      "selectors_key": "cli"
-    },
-    {
-      "url": "https://mqttx.app/zh/docs/cli",
-      "selectors_key": "cli"
-    },
-    {
-      "url": "https://mqttx.app/docs/web",
-      "selectors_key": "web"
-    },
-    {
-      "url": "https://mqttx.app/zh/docs/web",
-      "selectors_key": "web"
-    }
-  ],
+  "start_urls": ["https://mqttx.app/docs", "https://mqttx.app/zh/docs"],
   "min_indexed_level": 1,
   "selectors": {
-    "default": {
-      "lvl0": {
-        "selector": "",
-        "default_value": "MQTT X Desktop"
-      },
-      "lvl1": ".page-docs .nuxt-content h1",
-      "lvl2": ".page-docs .nuxt-content h2",
-      "lvl3": ".page-docs .nuxt-content h3",
-      "lvl4": ".page-docs .nuxt-content h4",
-      "lvl5": ".page-docs .nuxt-content h5",
-      "lvl6": ".page-docs .nuxt-content h6",
-      "text": ".page-docs .nuxt-content p,.page-docs .nuxt-content li"
-    },
-    "cli": {
-      "lvl0": {
-        "selector": "",
-        "default_value": "MQTT X CLI"
-      },
-      "lvl1": ".page-docs .nuxt-content h1",
-      "lvl2": ".page-docs .nuxt-content h2",
-      "lvl3": ".page-docs .nuxt-content h3",
-      "lvl4": ".page-docs .nuxt-content h4",
-      "lvl5": ".page-docs .nuxt-content h5",
-      "lvl6": ".page-docs .nuxt-content h6",
-      "text": ".page-docs .nuxt-content p,.page-docs .nuxt-content li"
-    },
-    "web": {
-      "lvl0": {
-        "selector": "",
-        "default_value": "MQTT X Web"
-      },
-      "lvl1": ".page-docs .nuxt-content h1",
-      "lvl2": ".page-docs .nuxt-content h2",
-      "lvl3": ".page-docs .nuxt-content h3",
-      "lvl4": ".page-docs .nuxt-content h4",
-      "lvl5": ".page-docs .nuxt-content h5",
-      "lvl6": ".page-docs .nuxt-content h6",
-      "text": ".page-docs .nuxt-content p,.page-docs .nuxt-content li"
-    }
+    "lvl0": ".page-docs #docs-type-tabs a.is-active",
+    "lvl1": ".page-docs #docs-sidebar .sidebar-link a.is-active",
+    "lvl2": ".page-docs .nuxt-content h2",
+    "lvl3": ".page-docs .nuxt-content h3",
+    "lvl4": ".page-docs .nuxt-content h4",
+    "lvl5": ".page-docs .nuxt-content h5",
+    "lvl6": ".page-docs .nuxt-content h6",
+    "text": ".page-docs .nuxt-content p,.page-docs .nuxt-content li"
   },
   "custom_settings": {
     "attributesForFaceting": ["language", "product", "version"]
