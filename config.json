@@ -2,11 +2,11 @@
   "index_name": "emq_docs",
   "sitemap_urls": [],
   "selectors": {
-    "lvl0": ".vp-doc h1",
-    "lvl1": ".vp-doc h2",
-    "lvl2": ".vp-doc h3",
-    "lvl3": ".vp-doc h4",
-    "lvl4": ".vp-doc h5",
+    "lvl0": ".VPNavBarTitle .title",
+    "lvl1": ".vp-doc h1",
+    "lvl2": ".vp-doc h2",
+    "lvl3": ".vp-doc h3",
+    "lvl4": ".vp-doc h4",
     "text": ".vp-doc p,.vp-doc ul,.vp-doc li,.vp-doc ol"
   },
   "custom_settings": {
