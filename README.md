@@ -16,23 +16,23 @@ export API_KEY=<YOUR_API_KEY>
 ```shell
 python3 -m src.index <CONFIG_FILE_NAME> <PRODUCT> <VERSION>
 
-python3 -m src.index global-config broker v4.3
 python3 -m src.index config broker v4.3
 ```
 
-> `CONFIG_FILE_NAME`: `global-config` or `config`
+> `CONFIG_FILE_NAME`: `config`
 ## Links
 - <https://github.com/algolia/docsearch-scraper>
 - <https://github.com/Swilder-M/docsearch-scraper>
 
 
-## Use for github action
+## Use for GitHub action
 ```yaml
       - name: update search index
-        uses: Swilder-M/docsearch-scraper-simple@v4
+        uses: Swilder-M/docsearch-scraper-simple@next
         env:
-          APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
-          API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+          APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID_NEXT }}
+          API_KEY: ${{ secrets.ALGOLIA_API_KEY_NEXT }}
+          BASE_URL: https://docs.emqx.com
         with:
           docs_type: ${{ env.DOCS_TYPE }}
           docs_version: ${{ env.VERSION }}

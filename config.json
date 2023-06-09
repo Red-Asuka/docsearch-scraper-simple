@@ -1,16 +1,15 @@
 {
   "index_name": "emq_docs",
   "sitemap_urls": [],
-  "strip_chars": "#  ",
   "selectors": {
-    "lvl0": ".theme-default-content h1",
-    "lvl1": ".theme-default-content h2",
-    "lvl2": ".theme-default-content h3",
-    "lvl3": ".theme-default-content h4",
-    "lvl4": ".theme-default-content h5",
-    "text": ".theme-default-content p,.theme-default-content ul,.theme-default-content li,.theme-default-content ol"
+    "lvl0": ".vp-doc h1",
+    "lvl1": ".vp-doc h2",
+    "lvl2": ".vp-doc h3",
+    "lvl3": ".vp-doc h4",
+    "lvl4": ".vp-doc h5",
+    "text": ".vp-doc p,.vp-doc ul,.vp-doc li,.vp-doc ol"
   },
   "custom_settings": {
-    "attributesForFaceting": ["language", "product", "version"]
+    "attributesForFaceting": ["lang", "product", "version"]
   }
 }

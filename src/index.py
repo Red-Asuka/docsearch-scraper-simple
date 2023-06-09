@@ -121,6 +121,7 @@ if __name__ == '__main__':
     config_name = 'config'
     if product == 'mqttx':
         config_name = 'mqttx-config'
+    base_url = os.environ.get('BASE_URL', 'https://docs.emqx.com')
     config_dict = json.load(open(f'{config_name}.json', 'r'))
     if product == 'broker':
         config_dict['index_name'] = 'emqx'
@@ -139,7 +140,7 @@ if __name__ == '__main__':
         config_dict['index_name'] = 'mqttx'
         # config_dict['sitemap_urls'] = ['https://mqttx.app/sitemap.xml']
     else:
-        config_dict['sitemap_urls'] = [f'https://docs.emqx.com/sitemap_{product}_{version}.xml']
+        config_dict['sitemap_urls'] = [f'{base_url}/sitemap_{product}_{version}.xml']
 
     config_dict.update({
         'current_product': product,
