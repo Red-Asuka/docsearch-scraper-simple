@@ -11,6 +11,6 @@
     "text": ".theme-default-content p,.theme-default-content ul,.theme-default-content li,.theme-default-content ol"
   },
   "custom_settings": {
-    "attributesForFaceting": ["language", "product", "version"]
+    "attributesForFaceting": ["lang", "language", "product", "version"]
   }
 }
