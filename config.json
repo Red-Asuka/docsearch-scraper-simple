@@ -10,6 +10,6 @@
     "text": ".vp-doc p,.vp-doc ul,.vp-doc li,.vp-doc ol"
   },
   "custom_settings": {
-    "attributesForFaceting": ["lang", "product", "version"]
+    "attributesForFaceting": ["lang", "language", "product", "version"]
   }
 }
