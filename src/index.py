@@ -144,9 +144,15 @@ if __name__ == '__main__':
 
     if product == 'enterprise':
         config_dict['stop_urls'] = [
-            'https://docs.emqx.com/zh/enterprise/*/hocon/',
-            'https://docs.emqx.com/en/enterprise/*/hocon/',
+            'https://docs.emqx.com/zh/enterprise/.*/hocon/',
+            'https://docs.emqx.com/en/enterprise/.*/hocon/'
         ]
+    elif product == 'broker':
+        config_dict['stop_urls'] = [
+            'https://www.emqx.io/docs/zh/.*/hocon/',
+            'https://www.emqx.io/docs/en/.*/hocon/'
+        ]
+
     config_dict.update({
         'current_product': product,
         'current_version': version
