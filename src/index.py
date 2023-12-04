@@ -142,8 +142,11 @@ if __name__ == '__main__':
     else:
         config_dict['sitemap_urls'] = [f'{base_url}/sitemap_{product}_{version}.xml']
 
-    if product in ['broker', 'enterprise']:
-        config_dict['stop_urls'] = ['/hocon/']
+    if product == 'enterprise':
+        config_dict['stop_urls'] = [
+            'https://docs.emqx.com/zh/enterprise/*/hocon/',
+            'https://docs.emqx.com/en/enterprise/*/hocon/',
+        ]
     config_dict.update({
         'current_product': product,
         'current_version': version
