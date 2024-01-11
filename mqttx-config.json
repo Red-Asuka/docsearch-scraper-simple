@@ -1,6 +1,6 @@
 {
   "index_name": "mqttx",
-  "start_urls": ["https://mqttx.app/docs", "https://mqttx.app/zh/docs"],
+  "start_urls": ["https://mqttx.app/docs", "https://mqttx.app/zh/docs", "https://mqttx.app/ja/docs"],
   "min_indexed_level": 1,
   "selectors": {
     "lvl0": ".page-docs #docs-type-tabs a.is-active",
