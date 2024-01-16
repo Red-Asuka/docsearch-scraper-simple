@@ -136,6 +136,8 @@ if __name__ == '__main__':
         config_dict['sitemap_urls'] = [f'https://ekuiper.org/docs/sitemap_{version}.xml']
     elif product == 'hstreamdb':
         config_dict['sitemap_urls'] = [f'https://hstream.io/docs/sitemap_{version}.xml']
+    elif product == 'datalayers':
+        config_dict['sitemap_urls'] = [f'https://datalayers.io/docs/sitemap_{version}.xml']
     elif product == 'mqttx':
         config_dict['index_name'] = 'mqttx'
         # config_dict['sitemap_urls'] = ['https://mqttx.app/sitemap.xml']
