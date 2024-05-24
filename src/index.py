@@ -155,6 +155,11 @@ if __name__ == '__main__':
             'https://www.emqx.io/docs/zh/.*/hocon/',
             'https://www.emqx.io/docs/en/.*/hocon/'
         ]
+    elif product == 'emqx':
+        config_dict['stop_urls'] = [
+            'https://docs.emqx.com/zh/emqx/.*/hocon/',
+            'https://docs.emqx.com/en/emqx/.*/hocon/'
+        ]
 
     config_dict.update({
         'current_product': product,
