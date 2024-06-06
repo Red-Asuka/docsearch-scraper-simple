@@ -126,6 +126,9 @@ if __name__ == '__main__':
     if product == 'broker':
         config_dict['index_name'] = 'emqx'
         config_dict['sitemap_urls'] = [f'https://www.emqx.io/docs/sitemap_{version}.xml']
+    elif product == 'emqx':
+        config_dict['index_name'] = 'emqx'
+        config_dict['sitemap_urls'] = [f'https://docs.emqx.com/sitemap_emqx_{version}.xml']
     elif product == 'nanomq':
         config_dict['index_name'] = 'nanomq'
         config_dict['sitemap_urls'] = [f'https://nanomq.io/docs/sitemap_{version}.xml']
