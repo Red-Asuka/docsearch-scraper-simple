@@ -2,12 +2,12 @@
   "index_name": "emq_docs",
   "sitemap_urls": [],
   "selectors": {
-    "lvl0": ".VPNavBarTitle .title",
+    "lvl0": ".VPSidebarItem.level-0.has-active .item .text",
     "lvl1": ".vp-doc h1",
     "lvl2": ".vp-doc h2",
     "lvl3": ".vp-doc h3",
     "lvl4": ".vp-doc h4",
-    "text": ".vp-doc p,.vp-doc ul,.vp-doc li,.vp-doc ol"
+    "text": ".vp-doc p,.vp-doc li"
   },
   "custom_settings": {
     "attributesForFaceting": ["lang", "language", "product", "version"]
