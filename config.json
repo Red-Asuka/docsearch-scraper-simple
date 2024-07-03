@@ -1,5 +1,5 @@
 {
-  "index_name": "emq_docs",
+  "index_name": "emqx",
   "sitemap_urls": [],
   "selectors": {
     "lvl0": ".VPNavBarTitle .title",
