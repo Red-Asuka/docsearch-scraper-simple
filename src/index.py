@@ -132,8 +132,6 @@ if __name__ == '__main__':
     elif product == 'nanomq':
         config_dict['index_name'] = 'nanomq'
         config_dict['sitemap_urls'] = [f'https://nanomq.io/docs/sitemap_{version}.xml']
-    elif product == 'neuron':
-        config_dict['sitemap_urls'] = [f'https://neugates.io/docs/sitemap_{version}.xml']
     elif product == 'ekuiper':
         config_dict['index_name'] = 'ekuiper'
         config_dict['sitemap_urls'] = [f'https://ekuiper.org/docs/sitemap_{version}.xml']
