@@ -137,9 +137,12 @@ if __name__ == '__main__':
         config_dict['sitemap_urls'] = [f'https://ekuiper.org/docs/sitemap_{version}.xml']
     elif product == 'hstreamdb':
         config_dict['sitemap_urls'] = [f'https://hstream.io/docs/sitemap_{version}.xml']
-    elif product == 'datalayers':
-        config_dict['index_name'] = 'datalayers_docs'
-        config_dict['sitemap_urls'] = [f'https://docs.datalayers.io/sitemap_{product}_{version}.xml']
+    elif product == 'datalayers-docs-zh':
+        config_dict['index_name'] = 'zh'
+        config_dict['sitemap_urls'] = [f'https://docs.datalayers.cn/sitemap_datalayers_{version}.xml']
+    elif product == 'datalayers-docs-en':
+        config_dict['index_name'] = 'en'
+        config_dict['sitemap_urls'] = [f'https://docs.datalayers.io/sitemap_datalayers_{version}.xml']
     elif product == 'mqttx':
         config_dict['index_name'] = 'mqttx'
         # config_dict['sitemap_urls'] = ['https://mqttx.app/sitemap.xml']
