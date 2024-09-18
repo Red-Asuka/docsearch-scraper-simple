@@ -138,9 +138,11 @@ if __name__ == '__main__':
     elif product == 'hstreamdb':
         config_dict['sitemap_urls'] = [f'https://hstream.io/docs/sitemap_{version}.xml']
     elif product == 'datalayers-docs-zh':
+        product = 'datalayers'
         config_dict['index_name'] = 'zh'
         config_dict['sitemap_urls'] = [f'https://docs.datalayers.cn/sitemap_datalayers_{version}.xml']
     elif product == 'datalayers-docs-en':
+        product = 'datalayers'
         config_dict['index_name'] = 'en'
         config_dict['sitemap_urls'] = [f'https://docs.datalayers.io/sitemap_datalayers_{version}.xml']
     elif product == 'mqttx':
