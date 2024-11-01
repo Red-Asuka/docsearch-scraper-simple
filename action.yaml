@@ -19,7 +19,7 @@ runs:
   steps:
     - shell: bash
       run: |
-        python -m pip install --upgrade pipenv==2024.2.0 wheel
+        python -m pip install --upgrade pipenv wheel
         cd ${{ github.action_path }}
         pipenv install
         pipenv run python -m src.index ${{ inputs.docs_type }} ${{ inputs.docs_version }}
