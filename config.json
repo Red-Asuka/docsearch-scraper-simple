@@ -2,7 +2,6 @@
   "index_name": "emqx-ecp",
   "sitemap_urls": [],
   "selectors": {
-    "lvl0": "section.has-active div h2",
     "lvl0": {
       "selector": "section.has-active div h2",
       "global": true
