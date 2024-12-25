@@ -1,0 +1,20 @@
+name: Test Update Search
+
+on:
+  push:
+    branches:
+      - search-test
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    if: github.repository_owner == 'Swilder-M'
+    steps:
+    - name: update search index
+      uses: Swilder-M/docsearch-scraper-simple@search-test
+      env:
+        APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID_TEST }}
+        API_KEY: ${{ secrets.ALGOLIA_API_KEY_TEST }}
+      with:
+        docs_type: emqx-ecp
+        docs_version: latest
